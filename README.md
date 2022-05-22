@@ -3,7 +3,7 @@ Simple sinatra RESTful MVC
 
 ## Install
 > cd sinatra-example<br />
-> bundle install
+> bundle
 
 ## Launch app
 > bundle exec rackup -p 4567
