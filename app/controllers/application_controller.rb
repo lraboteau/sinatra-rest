@@ -14,6 +14,10 @@ class ApplicationController < Sinatra::Base
     slim :'index'
   end
 
+  get '/users' do
+    User.get_all.map { |name, data| data.merge(id: name) }.to_json
+  end
+
   not_found do
     slim :'error'
   end
