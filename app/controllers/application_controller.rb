@@ -19,6 +19,14 @@ class ApplicationController < Sinatra::Base
     slim :'users'
   end
 
+  get '/api/users' do
+    result = []
+    User.users.each do |item|
+      result.push({Usename: item['usename'], Usesysid: item['usesysid']})
+    end
+    result.to_json
+  end
+
   not_found do
     slim :'error'
   end
