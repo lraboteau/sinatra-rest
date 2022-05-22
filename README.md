@@ -2,7 +2,7 @@
 Simple sinatra RESTful MVC
 
 ## Install
-> cd sinatra-example<br />
+> cd sinatra-rest<br />
 > bundle
 
 ## Launch app
