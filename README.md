@@ -1,5 +1,5 @@
 # sinatra-rest
-Simple sinatra RESTful MVC
+Simple sinatra RESTful MVC with PostgreSQL/Sequel
 
 ## Install
 > cd sinatra-rest<br />
