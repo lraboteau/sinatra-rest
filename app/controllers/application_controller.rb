@@ -2,12 +2,12 @@
 class ApplicationController < Sinatra::Base
 
   configure do
-    set :public_dir, 'public'
+    set :public_dir, 'css'
     set :views, 'app/views'
   end
 
   get '/assets/css/main.css' do
-    sass :'../../public/assets/css/main'
+    sass :'../../public/css/main'
   end
 
   get '/' do
@@ -15,16 +15,13 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/users' do
-    @data  = User.users
+    @data  = User.all
     slim :'users'
   end
 
   get '/api/users' do
-    result = []
-    User.users.each do |item|
-      result.push({Usename: item['usename'], Usesysid: item['usesysid']})
-    end
-    result.to_json
+    data  = User.all
+    return data.to_json
   end
 
   not_found do

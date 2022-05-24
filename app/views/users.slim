@@ -1,12 +1,9 @@
-.container
-  .row
-    h1 Users
-    p = @data.class
-    table.table.table-striped
-      thead
-        td Usename
-        td Usesysid
-      - @data.each do |item|
-        tr
-          td = item['usename']
-          td = item['usesysid']
+h1 Users
+table
+  thead
+    td Usename
+    td Usesysid
+  - @data.each do |item|
+    tr
+      td = item[:usename]
+      td = item[:usesysid]

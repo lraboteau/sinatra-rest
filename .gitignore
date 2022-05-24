@@ -61,4 +61,3 @@ build-iPhoneSimulator/
 .DS_Store
 .idea
 .sass-cache
-Gemfile.lock

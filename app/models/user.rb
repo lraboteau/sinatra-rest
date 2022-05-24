@@ -1,9 +1,11 @@
+# app/models/user.rb
 class User < Sinatra::Base
-  def self.users
-    return conn.exec_params('SELECT * FROM pg_user;')
+  def self.all
+    result = DB[:pg_user]
+    return result.all
   end
 
   configure do
-    set :users, User.users
+    set :all, User.all
   end
 end
